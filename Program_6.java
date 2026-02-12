@@ -1,6 +1,8 @@
 package Week_2;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 public class Program_6 {
@@ -15,18 +17,21 @@ public class Program_6 {
 
         System.out.println("List elements are : ");
         list.forEach((n)-> System.out.println(n));
-
-//        System.out.println("Names start with 'A': ");
-//        list.stream().forEach((n)->
-//                {
-//
-//                }
-//        );
-
+        System.out.println("--------------");
+        System.out.println("Names start with 'A': ");
+        list.forEach(lists->{
+            if(lists.charAt(0)== 'A')
+            {
+                System.out.println(lists);
+            }
+        });
+        System.out.println("--------------");
         System.out.println("Sorting names :");
-        list.sort((a, b) -> { return -1 * b.compareTo(a); });
+       // list.sort((a, b) -> { return -1 * b.compareTo(a); });
 //        list.sort(null);
-        System.out.println(list);
+        Collections.sort(list);
+        list.forEach(lists->System.out.println(lists));
+
 
     }
 }
